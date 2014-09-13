@@ -1,0 +1,6 @@
+{
+	"weather": [{"temp":"10", "desc":"Wind", "img" : "blah"}],
+	"top" : [{"top1": "blahblaht1"}, {"top2":"blahblaht2"}],
+	"bottom" : [{"bottom1": "blahblahb1"}, {"bottom2":"blahblahb2"}],
+	"shoes" : [{"shoe1": "blahblahs1"}, {"shoe2":"blahblahs2"}]
+}
