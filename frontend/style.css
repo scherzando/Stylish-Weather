@@ -5,3 +5,21 @@
 	font-family: 'Dosis', sans-serif;
 	color: #FFFFFF;
 }
+
+.p {
+	font-family: 'Chivo', sans-serif;
+}
+
+.item-image {
+	float: left;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.clear {
+	clear: both;
+}
+
+.row {
+	padding-top: 10px;
+}
