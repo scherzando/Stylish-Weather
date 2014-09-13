@@ -1,0 +1,47 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family:'Dosis', sans-serif;
+}
+
+p {
+	font-family:'Chivo', sans-serif;
+}
+
+h2.temp {
+	font-size: 40px;
+	margin: 0 0 10px 0;
+}
+
+.right {
+	text-align: right;
+}
+
+.item h3, .item p {
+	color: #fff;
+}
+
+.item:hover {
+	text-decoration: none;
+}
+
+.item-content {
+	padding: 10px;
+}
+
+.item-img {
+	float: left;
+}
+
+.item-detail {
+	height: 175px;
+	background: #6F256F;
+}
+
+.item-detail p, .item-detail h3 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 185px;
+}
+
+.item-detail h3 {
+	margin: 0;
+}
