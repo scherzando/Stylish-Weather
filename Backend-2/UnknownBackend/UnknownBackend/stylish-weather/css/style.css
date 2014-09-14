@@ -4,6 +4,7 @@
 }
 
 .jumbotron h1 {
+	margin-top: 50px; 
 	color: #fff;
 }
 
@@ -25,6 +26,19 @@ h2.temp {
 	color: #fff;
 	font-size: 40px;
 	margin: 0 0 10px 0;
+}
+
+.view-more {
+	border-radius: 0;
+	font-size: 18px;
+	background-color: #000;
+	font-family:'Dosis', sans-serif;
+	text-transform: uppercase;
+	border: none;
+}
+
+.view-more:hover {
+	background-color: #c03232;
 }
 
 .right {
@@ -79,4 +93,8 @@ h2.temp {
 
 .dropdown-menu ul li a {
 	color: #fff;
+}
+
+.navbar-form {
+		box-shadow: none;
 }
