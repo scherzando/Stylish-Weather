@@ -26,8 +26,8 @@ namespace UnknownBackend.Tests
         [TestMethod]
         public void TestSetName()
         {
-            group.Name = "Name";
-            Assert.AreEqual("Name", group.Name);
+            group.name = "Name";
+            Assert.AreEqual("Name", group.name);
         }
 
         [TestMethod]

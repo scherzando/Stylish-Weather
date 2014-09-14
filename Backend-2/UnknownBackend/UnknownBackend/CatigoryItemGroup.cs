@@ -14,7 +14,7 @@ namespace UnknownBackend
         //public List<AuctionItem> items {get; set;}
         public AuctionItem first { get; set; }
         public AuctionItem second { get; set; }
-        public string Name { get; set; }
+        public string name { get; set; }
 
         public string CatUrl { get; set; }
 
@@ -23,7 +23,7 @@ namespace UnknownBackend
             //items = new List<AuctionItem>();
             first = new AuctionItem("title 1", "12", "http://www.stuff.co.nz");
             second = new AuctionItem("title 2", "12", "http://www.stuff.co.nz");
-            Name = "Some name";
+            name = "Some name";
             CatUrl = "URL";
         }
 
@@ -38,7 +38,7 @@ namespace UnknownBackend
             // TODO: fix assume
             first = new AuctionItem(qItems[0]);
             second = new AuctionItem(qItems[1]);
-            this.Name = name;
+            this.name = name;
         }
 
 

@@ -39,7 +39,7 @@ namespace UnknownBackend
         public static List<QueryResult> callTrademeApi(int catID)
         {
             WebClient client = new WebClient();
-            String s = client.DownloadString(String.Format("https://api.trademe.co.nz/v1/Search/General.json?buy=All&category={0}&condition=All&expired=false&page=1&pay=All&photo_size=Gallery&return_metadata=false&shipping_method=All&sort_order=Default", catID));
+            String s = client.DownloadString(String.Format("https://api.trademe.co.nz/v1/Search/General.json?buy=All&category={0}&condition=All&expired=false&page=1&pay=All&photo_size=Medium&return_metadata=false&shipping_method=All&sort_order=Default", catID));
 
             var serializer = new Newtonsoft.Json.JsonSerializer();
 

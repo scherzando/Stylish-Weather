@@ -171,6 +171,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -192,6 +193,24 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="stylish-weather\css\bootstrap-theme.css" />
+    <Content Include="stylish-weather\css\bootstrap-theme.min.css" />
+    <Content Include="stylish-weather\css\bootstrap.css" />
+    <Content Include="stylish-weather\css\bootstrap.min.css" />
+    <Content Include="stylish-weather\css\jquery-ui.min.css" />
+    <Content Include="stylish-weather\css\style.css" />
+    <Content Include="stylish-weather\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="stylish-weather\img\bg-red.png" />
+    <Content Include="stylish-weather\img\bg.png" />
+    <Content Include="stylish-weather\img\cloudy.png" />
+    <Content Include="stylish-weather\img\logo.png" />
+    <Content Include="stylish-weather\img\rainy.png" />
+    <Content Include="stylish-weather\img\sunny.png" />
+    <Content Include="stylish-weather\img\windy.png" />
+    <Content Include="stylish-weather\index.html" />
+    <Content Include="stylish-weather\js\bootstrap.js" />
+    <Content Include="stylish-weather\js\bootstrap.min.js" />
+    <Content Include="stylish-weather\js\tile-script.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -208,6 +227,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="test.json" />
+    <Content Include="stylish-weather\css\bootstrap-theme.css.map" />
+    <Content Include="stylish-weather\css\bootstrap.css.map" />
+    <Content Include="stylish-weather\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="stylish-weather\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="stylish-weather\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="stylish-weather\test.json" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
