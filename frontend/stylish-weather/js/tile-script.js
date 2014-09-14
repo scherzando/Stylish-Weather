@@ -77,8 +77,6 @@ function createInnerCategory(catObj){
 
 // fill in header/weather information
 function fillHeader(weather){
-	var headerBox = document.getElementById('header-box');
-	
 	var dateText = document.getElementById('date-text');
 	dateText.innerHTML = weather.date;
 
@@ -90,8 +88,10 @@ function fillHeader(weather){
 }
 
 $(document).ready(function() {
-	var jObj = $.getJSON("test.json", function(json){
-		
+
+	var jsonData = "http://sch-laptop:80/api/Clothing";
+
+	$.getJSON(jsonData, function(json){
 		fillHeader(json.weather);
 		createTiles(json.items);
 	});
