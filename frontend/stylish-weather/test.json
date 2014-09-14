@@ -1,0 +1,51 @@
+{
+	"weather": {
+		"temp": "10",
+		"desc": "Wind",
+		"img": "url"
+	},
+	"items": [
+		{"name": "tops",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "http://placehold.it/175x175"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "http://placehold.it/175x175"
+			}
+		},
+
+    {"name": "bottoms",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "http://placehold.it/175x175"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "http://placehold.it/175x175"
+			}
+		},
+		
+		{"name": "shoes",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "http://placehold.it/175x175"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "http://placehold.it/175x175"
+			}
+		}
+
+	]
+}

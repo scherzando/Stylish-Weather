@@ -1,0 +1,65 @@
+{
+	"weather": [{"temp":"10", "weatDesc":"Wind", "img" : "blah"}],
+	"tops" : [{"title": "blahblahblah", "itemPrice": "10", "itemUrl": "URL"}, {"title": "blahblahblah", "itemPrice": "10", "itemUrl": "URL"}, {"catUrl": "http:"}],
+	"bottom" : [{"title": "blahblahblah", "itemPrice": "10", "itemUrl": "URL"}, {"title": "blahblahblah", "itemPrice": "10", "itemUrl": "URL"}, {"catUrl": "URL"}],
+	"shoes" : [{"title": "blahblahblah", "itemPrice": "10", "itemUrl": "URL"}, {"title": "blahblahblah", "itemPrice": "10", "itemUrl": "URL"}, {"catUrl": "URL"}]
+}
+
+{
+	"items": [
+	{
+		"weather": {
+			"0": {
+			"temp": "10",
+			"weatDesc": "Wind",
+			"img": "blah"
+		}
+	},
+		"tops": {
+			"0": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+		},
+			"1": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+		},
+			"2": {
+			"catUrl": "http:"
+		}
+	},
+		"bottom": {
+			"0": {
+			"title": "blahblahblah",	
+			"itemPrice": "10",
+			"itemUrl": "URL"
+		},
+			"1": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+		},
+			"2": {
+			"catUrl": "URL"
+		}
+	},
+		"shoes": {
+			"0": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+	},
+		"1": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+	},
+		"2": {
+			"catUrl": "URL"
+		}
+	}
+}
+]
+}

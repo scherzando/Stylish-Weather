@@ -1,0 +1,51 @@
+{
+	"weather": {
+		"temp": "10",
+		"desc": "Wind",
+		"img": "url"
+	},
+	"items": [
+		{"name": "tops",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+			}
+		},
+
+    {"name": "bottoms",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+			}
+		},
+		
+		{"name": "shoes",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"itemUrl": "URL"
+			}
+		}
+
+	]
+}
