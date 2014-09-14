@@ -36,8 +36,17 @@ namespace UnknownBackend
         public CatigoryItemGroup(string name, List<TrademeAccessor.QueryResult> qItems)
         {
             // TODO: fix assume
-            first = new AuctionItem(qItems[0]);
-            second = new AuctionItem(qItems[1]);
+            Random rand = new Random(DateTime.Today.Second);
+            int num1 = rand.Next(qItems.Count - 1);
+            first = new AuctionItem(qItems[num1]);
+            int num2 = rand.Next(qItems.Count - 1);
+
+            while (num1 == num2)
+            {
+                num2 = rand.Next(qItems.Count-1);
+            }
+
+            second = new AuctionItem(qItems[num2]);
             this.name = name;
         }
 

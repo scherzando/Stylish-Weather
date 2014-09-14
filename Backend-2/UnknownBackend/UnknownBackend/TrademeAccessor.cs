@@ -36,26 +36,123 @@ namespace UnknownBackend
             public string Price { get; set; }
         }
 
-        public static List<QueryResult> callTrademeApi(int catID)
+        //public static List<QueryResult> callTrademeApi(String Searhword)
+        //{
+        //    WebClient client = new WebClient();
+        //    String s = client.DownloadString(String.Format("https://api.trademe.co.nz/v1/Search/General.json?buy=All&{0}&photo_size=Gallery", Searhword));
+
+        //    var serializer = new Newtonsoft.Json.JsonSerializer();
+
+        //    var results = (SearchResults)serializer.Deserialize(new StringReader(s), typeof(SearchResults));
+        //    var queryResults = new List<QueryResult>();
+
+        //    foreach (Listing l in results.List)
+        //    {
+        //        var result = new QueryResult();
+        //        result.Title = l.Title;
+        //        result.Price = l.PriceDisplay;
+        //        result.HyperlinkUrl = string.Format("http://www.trademe.co.nz/{0}", l.ListingId);
+        //        result.ImageUrl = l.PictureHref;
+        //        queryResults.Add(result);
+        //    }
+        //    return queryResults;
+        //}
+
+        public static List<CatigoryItemGroup> getLists()
+        {
+
+            var AlltheLists = new List<List<QueryResult>> { };
+
+            //    if (varWeather.Equals("OverCast ) 
+
+            var resultsTops = callTrademeApi(CategorySort("ColdTops"));
+
+            var resultsPant = callTrademeApi(CategorySort("ColdPants"));
+
+            var resultsShoes = callTrademeApi(CategorySort("ColdShoes"));
+
+            // AlltheLists = new List<List<QueryResult>>();
+
+            AlltheLists.Add(resultsTops);
+
+            AlltheLists.Add(resultsPant);
+            AlltheLists.Add(resultsShoes);
+
+            List<CatigoryItemGroup> items = new List<CatigoryItemGroup>();
+            items.Add(new CatigoryItemGroup("Tops for cold weather", resultsTops));
+            items.Add(new CatigoryItemGroup("Pants for cold weather", resultsPant));
+            items.Add(new CatigoryItemGroup("Shoes for cold weather", resultsShoes));
+            
+
+            return items;
+
+        }
+        public static List<QueryResult> callTrademeApi(String Searhword)
         {
             WebClient client = new WebClient();
-            String s = client.DownloadString(String.Format("https://api.trademe.co.nz/v1/Search/General.json?buy=All&category={0}&condition=All&expired=false&page=1&pay=All&photo_size=Medium&return_metadata=false&shipping_method=All&sort_order=Default", catID));
+
+
+
+            String s = client.DownloadString(String.Format("https://api.trademe.co.nz/v1/Search/General.json?buy=All&{0}&photo_size=Gallery", Searhword));
 
             var serializer = new Newtonsoft.Json.JsonSerializer();
 
             var results = (SearchResults)serializer.Deserialize(new StringReader(s), typeof(SearchResults));
+
+
+
+
             var queryResults = new List<QueryResult>();
 
             foreach (Listing l in results.List)
             {
+
                 var result = new QueryResult();
+
                 result.Title = l.Title;
+
                 result.Price = l.PriceDisplay;
+
                 result.HyperlinkUrl = string.Format("http://www.trademe.co.nz/{0}", l.ListingId);
                 result.ImageUrl = l.PictureHref;
                 queryResults.Add(result);
+
             }
+
             return queryResults;
+
+
         }
+
+
+
+
+
+        public static string CategorySort(String searchword)
+        {
+
+            if (searchword.Equals("ColdPants")) return "category=6849&style=jeans&pants";
+
+            if (searchword.Equals("ColdTops")) return "category=3033&style=jumpers&jerseys&cardigan";
+
+            if (searchword.Equals("ColdShoes")) return "category=762&style=Boots";
+
+            throw new Exception("Oh noes, it broke :-(");
+
+        }
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
 }
+
