@@ -9,7 +9,7 @@ namespace UnknownBackend.Controllers
 {
     public class ClothingController : ApiController
     {
-        // GET: api/ClothingController
+        // GET: api/Clothing
         public RequestResult Get()
         {
             return new RequestResult();

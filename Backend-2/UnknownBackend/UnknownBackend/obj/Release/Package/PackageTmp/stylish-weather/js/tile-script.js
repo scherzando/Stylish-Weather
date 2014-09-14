@@ -1,4 +1,3 @@
-
 function createTiles(items) {
     var tileBox = document.getElementById('tile-box');
     for (var i = 0; i < items.length; i++) {
@@ -27,7 +26,7 @@ function createCategory(itemObj) {
     var moreItemContent = document.createElement('div');
     moreItemContent.className = "item-content";
     var linkBtn = document.createElement('a');
-    linkBtn.className = "btn btn-primary text-center view-more";
+    linkBtn.className = "btn btn-primary text-center";
     linkBtn.href = "#";
     linkBtn.type = "button";
     linkBtn.innerHTML = "View more";
@@ -75,21 +74,6 @@ function createInnerCategory(catObj) {
     return col;
 }
 
-// fill in header/weather information
-function fillHeader(weather) {
-    var cityName = document.getElementById('city-name');
-    cityName.innerHTML = "WELLINGTON";
-
-    var dateText = document.getElementById('date-text');
-    dateText.innerHTML = weather.date;
-
-    var tempText = document.getElementById('temp-text');
-    tempText.innerHTML = weather.temp + "°C";
-
-    var img = document.getElementById('weather-img');
-    img.setAttribute('src', weather.img);
-}
-
 // Pat's datepicker function
 $(function () {
     $("#datepicker").datepicker({
@@ -105,16 +89,44 @@ $(function () {
     });
 });
 
-function todaysDate() {
-
+Date.prototype.getDayName = function () {
+    var d = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
+	'Thursday', 'Friday', 'Saturday'];
+    return d[this.getDay()];
 }
 
-var date = todaysDate();
+// fill in header/weather information
+function fillHeader(weather) {
+    var cityName = document.getElementById('city-name')
+    cityName.innerHTML = "WELLINGTON";
+
+    var dateText = document.getElementById('date-text');
+    // format date
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+
+    var date = new Date(weather.date);
+    var day = date.getDate();
+    var month = monthNames[date.getMonth()];
+    var year = date.getFullYear();
+    var dayName = date.getDayName();
+
+    var dateString = dayName + " " + day + " " + month;
+
+    dateText.innerHTML = dateString;
+
+    var tempText = document.getElementById('temp-text');
+    tempText.innerHTML = weather.temp + "°C";
+
+    var img = document.getElementById('weather-img');
+    img.setAttribute('src', weather.img);
+}
+
 
 $(document).ready(function () {
+
     var jsonData = "/api/Clothing";
-    //var date = $("#datepicker").datepicker("getDate");
-    console.log(date);
+
     $.getJSON(jsonData, function (json) {
         fillHeader(json.weather);
         createTiles(json.items);

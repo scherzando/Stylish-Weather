@@ -202,6 +202,7 @@
     <Content Include="stylish-weather\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="stylish-weather\img\bg-red.png" />
     <Content Include="stylish-weather\img\bg.png" />
+    <Content Include="stylish-weather\img\calendar.png" />
     <Content Include="stylish-weather\img\cloudy.png" />
     <Content Include="stylish-weather\img\logo.png" />
     <Content Include="stylish-weather\img\rainy.png" />
