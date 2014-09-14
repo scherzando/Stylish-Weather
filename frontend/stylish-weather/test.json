@@ -10,12 +10,12 @@
 			"first": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "URL"
+			"itemUrl": "http://placehold.it/175x175"
 			},
 			"second": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "URL"
+			"itemUrl": "http://placehold.it/175x175"
 			}
 		},
 
@@ -24,12 +24,12 @@
 			"first": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "URL"
+			"itemUrl": "http://placehold.it/175x175"
 			},
 			"second": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "URL"
+			"itemUrl": "http://placehold.it/175x175"
 			}
 		},
 		
@@ -38,12 +38,12 @@
 			"first": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "URL"
+			"itemUrl": "http://placehold.it/175x175"
 			},
 			"second": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "URL"
+			"itemUrl": "http://placehold.it/175x175"
 			}
 		}
 
