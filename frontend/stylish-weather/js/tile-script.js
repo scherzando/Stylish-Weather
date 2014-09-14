@@ -77,6 +77,9 @@ function createInnerCategory(catObj){
 
 // fill in header/weather information
 function fillHeader(weather){
+	var cityName = document.getElementById('city-name')
+	cityName.innerHTML = "WELLINGTON";
+
 	var dateText = document.getElementById('date-text');
 	dateText.innerHTML = weather.date;
 
