@@ -9,7 +9,7 @@
 		<meta name="author" content="">
 		<link rel="icon" href="">
 
-		<title>Jumbotron Template for Bootstrap</title>
+		<title>Stylish Weather</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	 	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 		<!-- Google Fonts -->
@@ -17,11 +17,11 @@
 		<link href='http://fonts.googleapis.com/css?family=Chivo' rel='stylesheet' type='text/css'>
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
 		<link href="css/style.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<!-- <link href="jumbotron.css" rel="stylesheet"> -->
+		<link href="jumbotron.css" rel="stylesheet">
 
 		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script<![endif]-->
@@ -40,9 +40,8 @@
 		      buttonImageOnly: true,
 		      buttonText: "Select date",
 		      minDate: 0, maxDate: "+10D"
-	  		});
-		});
-
+		    });
+	  	});
 	</script>
 </head>
 
@@ -50,13 +49,13 @@
 	<div class="navbar navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div>
-				<a class="navbar-brand" href="#">Stylish Weather</a>
+				<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
 			</div>
 			<div>
 				<form class="navbar-form right" role="form">
 					<!-- Single button -->
 					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<button type="button" class="city btn btn-default dropdown-toggle" data-toggle="dropdown">
 							Select city <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -75,129 +74,30 @@
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<div class="jumbotron">
 		<div class="container">
+			
 			<h1 class="text-center">WELLINGTON</h1>
 			<div class="row">
 				<div class="col-xs-6 col-sm-6 col-md-6 right">
-					<p>Today <br>
+					<p id="date-text">Today<br>
 					Sunday 14 Sept</p>
-					<p><input type="hidden" id="datepicker"></p>
+					<p><input type="text" id="datepicker"></p>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6">
-					<h2 class="temp">12°C</h2>
-					<img src="http://placehold.it/100x100">
+					<h2 class="temp" id="temp-text">12°C</h2>
+					<img src="img/rainy.png" id="weather-img">
 				</div>
 			</div>
+
 		</div>
 	</div>
 
 	<div class="container">
-
 		<div id="tile-box"></div>
 		<script src="js/tile-script.js"></script>
-		<!-- Example row of columns -->
-		<div class="row">
-			<h2 class="text-center">TOPS</h2>
-			<hr>
-			<div id="tops">
-				<div class="col-md-5">
-					<a class ="item" href="#">
-						<div class="item-content">
-							<img class="item-img clear" src="http://placehold.it/175x175">
-							<div class="item-detail">
-								<h3>Country road 100% cotton summer cardi</h3>
-								<p>Buy now: $10.00</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-5">
-					<div class="item-content">
-						<a class ="item" href="#">
-							<img class="item-img clear" src="http://placehold.it/175x175">
-							<div class="item-detail">
-								<h3>Country road 100% cotton summer cardi</h3>
-								<p>Buy now: $10.00</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="item-content">
-						<a href="#" type="button" class="btn btn-primary text-center">View more</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<h2 class="text-center">TOPS</h2>
-			<hr>
-			<div class="col-md-5">
-				<a class ="item" href="#">
-					<div class="item-content">
-						<img class="item-img clear" src="http://placehold.it/175x175">
-						<div class="item-detail">
-							<h3>Country road 100% cotton summer cardi</h3>
-							<p>Buy now: $10.00</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-5">
-				<div class="item-content">
-					<a class ="item" href="#">
-						<img class="item-img clear" src="http://placehold.it/175x175">
-						<div class="item-detail">
-							<h3>Country road 100% cotton summer cardi</h3>
-							<p>Buy now: $10.00</p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div class="item-content">
-					<a href="#" type="button" class="btn btn-primary text-center">View more</a>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<h2 class="text-center">TOPS</h2>
-			<hr>
-			<div class="col-md-5">
-				<a class ="item" href="#">
-					<div class="item-content">
-						<img class="item-img clear" src="http://placehold.it/175x175">
-						<div class="item-detail">
-							<h3>Country road 100% cotton summer cardi</h3>
-							<p>Buy now: $10.00</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-5">
-				<div class="item-content">
-					<a class ="item" href="#">
-						<img class="item-img clear" src="http://placehold.it/175x175">
-						<div class="item-detail">
-							<h3>Country road 100% cotton summer cardi</h3>
-							<p>Buy now: $10.00</p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div class="item-content">
-					<a href="#" type="button" class="btn btn-primary text-center">View more</a>
-				</div>
-			</div>
-		</div>
-
 		<footer>
 			<p>&copy; Stylish Weather 2014</p>
 		</footer>
 	</div> <!-- /container -->
-
 
 	 <!-- Bootstrap core JavaScript
 	 ================================================== -->

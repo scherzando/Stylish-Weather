@@ -1,8 +1,9 @@
 {
 	"weather": {
-		"temp": "10",
+		"temp": "30",
 		"desc": "Wind",
-		"img": "url"
+		"img": "img/rainy.png",
+		"date": "12/05/2014"
 	},
 	"items": [
 		{"name": "tops",
@@ -10,12 +11,14 @@
 			"first": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "http://placehold.it/175x175"
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
 			},
 			"second": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "http://placehold.it/175x175"
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
 			}
 		},
 
@@ -24,12 +27,14 @@
 			"first": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "http://placehold.it/175x175"
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
 			},
 			"second": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "http://placehold.it/175x175"
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
 			}
 		},
 		
@@ -38,12 +43,14 @@
 			"first": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "http://placehold.it/175x175"
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
 			},
 			"second": {
 			"title": "blahblahblah",
 			"itemPrice": "10",
-			"itemUrl": "http://placehold.it/175x175"
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
 			}
 		}
 

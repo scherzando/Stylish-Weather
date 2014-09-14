@@ -1,24 +1,18 @@
 
-function createTiles(jsonObj){
-	var items = jsonObj.items;
-
+function createTiles(items){
 	var tileBox = document.getElementById('tile-box');
-	
-
 	for(var i = 0; i < items.length; i++){
 		var cont = document.createElement('div');
 		cont.className = "row";
 		var title = document.createElement('h2');
 		title.className = "text-center";
-		title.innerHTML = items[i].name;
+		title.innerHTML = (items[i].name).toUpperCase();
 		cont.appendChild(title);
 		cont.appendChild(document.createElement('hr'));
 		var cat = createCategory(items[i]);
 		cont.appendChild(cat);
 		tileBox.appendChild(cont);
 	}
-
-	
 }
 
 // returns one category object to be appended to the DOM
@@ -47,20 +41,21 @@ function createCategory(itemObj){
 	return categoryDiv;
 }
 
+// helper function for createCategory
 function createInnerCategory(catObj){
 	var col = document.createElement('div');
 	col.className = "col-md-5";
 	
 	var link = document.createElement('a');
 	link.className = "item";
-	link.href = "#";
+	link.href = catObj.itemUrl;
 
 	var itemContent = document.createElement('div');
 	itemContent.className = "item-content";
 
 	var image = document.createElement('img');
 	image.className = "item-img clear";
-	image.src = catObj.itemUrl;
+	image.src = catObj.imageUrl;
 
 	var detail = document.createElement('div');
 	detail.className = "item-detail";
@@ -69,7 +64,7 @@ function createInnerCategory(catObj){
 	titleText.innerHTML = catObj.title;
 
 	var buyNow = document.createElement('p');
-	buyNow.innerHTML = "Buy Now: " + catObj.itemPrice; // TODO: format price
+	buyNow.innerHTML = "Buy Now: " + catObj.itemPrice;
 
 	detail.appendChild(titleText);
 	detail.appendChild(buyNow);
@@ -80,6 +75,24 @@ function createInnerCategory(catObj){
 	return col;
 }
 
-var jObj = $.getJSON("test.json", function(json){
-	createTiles(json);
+// fill in header/weather information
+function fillHeader(weather){
+	var dateText = document.getElementById('date-text');
+	dateText.innerHTML = weather.date;
+
+	var tempText = document.getElementById('temp-text');
+	tempText.innerHTML = weather.temp + "°C";
+	
+	var img = document.getElementById('weather-img');
+	img.setAttribute('src', weather.img);
+}
+
+$(document).ready(function() {
+
+	var jsonData = "http://sch-laptop:80/api/Clothing";
+
+	$.getJSON(jsonData, function(json){
+		fillHeader(json.weather);
+		createTiles(json.items);
+	});
 });
