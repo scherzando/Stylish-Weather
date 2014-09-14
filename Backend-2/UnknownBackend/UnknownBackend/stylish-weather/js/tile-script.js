@@ -95,7 +95,14 @@ Date.prototype.getDayName = function () {
     return d[this.getDay()];
 }
 
+Date.prototype.getDayName = function() {
+	var d = ['Sunday','Monday','Tuesday','Wednesday',
+	'Thursday','Friday','Saturday'];
+	return d[this.getDay()];
+}
+
 // fill in header/weather information
+<<<<<<< HEAD
 function fillHeader(weather) {
     var cityName = document.getElementById('city-name')
     cityName.innerHTML = "WELLINGTON";
@@ -122,6 +129,36 @@ function fillHeader(weather) {
     img.setAttribute('src', weather.img);
 }
 
+=======
+function fillHeader(weather){
+	var cityName = document.getElementById('city-name')
+	cityName.innerHTML = "WELLINGTON";
+
+	var dateText = document.getElementById('date-text');
+	// format date
+	var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+
+	var date = new Date(weather.date);
+	var day = date.getDate();
+	var month = monthNames[date.getMonth()];
+	var year = date.getFullYear();
+	var dayName = date.getDayName();
+
+	var dateString = dayName + " " + day + " " + month;
+
+	dateText.innerHTML = dateString;
+
+	var tempText = document.getElementById('temp-text');
+	tempText.innerHTML = weather.temp + "°C";
+	
+	var img = document.getElementById('weather-img');
+	img.setAttribute('src', weather.img);
+}
+
+
+$(document).ready(function() {
+>>>>>>> origin/master
 
 $(document).ready(function () {
 

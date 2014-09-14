@@ -75,13 +75,31 @@ function createInnerCategory(catObj){
 	return col;
 }
 
+Date.prototype.getDayName = function() {
+	var d = ['Sunday','Monday','Tuesday','Wednesday',
+	'Thursday','Friday','Saturday'];
+	return d[this.getDay()];
+}
+
 // fill in header/weather information
 function fillHeader(weather){
 	var cityName = document.getElementById('city-name')
 	cityName.innerHTML = "WELLINGTON";
 
 	var dateText = document.getElementById('date-text');
-	dateText.innerHTML = weather.date;
+	// format date
+	var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+
+	var date = new Date(weather.date);
+	var day = date.getDate();
+	var month = monthNames[date.getMonth()];
+	var year = date.getFullYear();
+	var dayName = date.getDayName();
+
+	var dateString = dayName + " " + day + " " + month;
+
+	dateText.innerHTML = dateString;
 
 	var tempText = document.getElementById('temp-text');
 	tempText.innerHTML = weather.temp + "°C";
@@ -105,16 +123,9 @@ $(function() {
 	});
 });
 
-function todaysDate(){
-
-}
-
-var date = todaysDate();
 
 $(document).ready(function() {
 	var jsonData = "test.json";//"http://sch-laptop:80/api/Clothing";
-	//var date = $("#datepicker").datepicker("getDate");
-	console.log(date);
 	$.getJSON(jsonData, function(json){
 		fillHeader(json.weather);
 		createTiles(json.items);
