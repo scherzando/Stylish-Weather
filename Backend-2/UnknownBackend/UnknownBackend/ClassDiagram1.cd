@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UnknownBackend.DayInfo">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgQA=</HashCode>
+      <FileName>DayInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnknownBackend.RecommendedItem" Collapsed="true">
+    <Position X="5.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAgACAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>RecommendedItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnknownBackend.WeatherAccessor" Collapsed="true">
+    <Position X="1.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAIAAAAAAAABAAAAAAgBAAAAAA=</HashCode>
+      <FileName>WeatherAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnknownBackend.Controllers.DayInfoController">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Controllers\DayInfoController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

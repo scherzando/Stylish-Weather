@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnknownBackend", "UnknownBackend\UnknownBackend.csproj", "{1F7D216B-5D64-4709-A291-0C603D4F1A52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnknownBackend.Tests", "UnknownBackend.Tests\UnknownBackend.Tests.csproj", "{54B97D11-A0F5-4C6F-AE73-834DB53D9B59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F7D216B-5D64-4709-A291-0C603D4F1A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F7D216B-5D64-4709-A291-0C603D4F1A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F7D216B-5D64-4709-A291-0C603D4F1A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F7D216B-5D64-4709-A291-0C603D4F1A52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B97D11-A0F5-4C6F-AE73-834DB53D9B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B97D11-A0F5-4C6F-AE73-834DB53D9B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B97D11-A0F5-4C6F-AE73-834DB53D9B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B97D11-A0F5-4C6F-AE73-834DB53D9B59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
