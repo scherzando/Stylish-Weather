@@ -27,7 +27,7 @@ function createCategory(itemObj){
 	var moreItemContent = document.createElement('div');
 	moreItemContent.className = "item-content";
 	var linkBtn = document.createElement('a');
-	linkBtn.className = "btn btn-primary text-center";
+	linkBtn.className = "btn btn-primary text-center view-more";
 	linkBtn.href = "#";
 	linkBtn.type = "button";
 	linkBtn.innerHTML = "View more";
@@ -89,10 +89,10 @@ function fillHeader(weather){
 
 // Pat's datepicker function
 $(function() {
-	$( "#datepicker" ).datepicker({
+	$("#datepicker").datepicker({
 		dateFormat: 'yy-mm-dd',
 		showOn: "button",
-		buttonImage: "images/calendar.gif",
+		buttonImage: "img/calendar.png",
 		buttonImageOnly: true,
 		buttonText: "Select date",
 		minDate: 0, maxDate: "+10D",
@@ -102,8 +102,16 @@ $(function() {
 	});
 });
 
+function todaysDate(){
+
+}
+
+var date = todaysDate();
+
 $(document).ready(function() {
-	var jsonData = "http://sch-laptop:80/api/Clothing";
+	var jsonData = "test.json";//"http://sch-laptop:80/api/Clothing";
+	//var date = $("#datepicker").datepicker("getDate");
+	console.log(date);
 	$.getJSON(jsonData, function(json){
 		fillHeader(json.weather);
 		createTiles(json.items);
