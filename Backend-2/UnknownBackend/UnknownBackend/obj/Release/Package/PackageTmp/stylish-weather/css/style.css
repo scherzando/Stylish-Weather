@@ -1,0 +1,82 @@
+.jumbotron {
+	background: url(../img/bg-red.png);
+	background-color: #c03232;
+}
+
+.jumbotron h1 {
+	color: #fff;
+}
+
+h1, h3, h4, h5, h6 {
+	color: #fff;
+	font-family:'Dosis', sans-serif;
+}
+
+p, ul, li {
+	color: #fff;
+	font-family:'Chivo', sans-serif;
+}
+
+h2 {
+	font-family:'Dosis', sans-serif;
+}
+
+h2.temp {
+	color: #fff;
+	font-size: 40px;
+	margin: 0 0 10px 0;
+}
+
+.right {
+	text-align: right;
+}
+
+.item h3, .item p {
+	color: grey;
+}
+
+.item:hover {
+	text-decoration: none;
+}
+
+.item-content {
+	padding: 10px;
+}
+
+.item-img {
+	float: left;
+}
+
+.item-detail {
+	height: 175px;
+	background: #f7e9e7;
+}
+
+.item-detail p, .item-detail h3 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 185px;
+}
+
+.item-detail h3 {
+	margin: 0;
+}
+
+.city {
+	font-size: 16px;
+	font-family: 'Dosis', sans-serif;
+	background-color: black;
+	border: none;
+	border-radius: 0;
+	color: #fff
+}
+
+.dropdown-menu {
+	background-color: #f7e9e7;
+	border: none;
+	border-radius: 0;
+}
+
+.dropdown-menu ul li a {
+	color: #fff;
+}

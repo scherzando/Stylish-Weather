@@ -20,6 +20,7 @@ namespace UnknownBackend
             temp = input[0];
             desc = input[1];
             img = input[2];
+            date = String.Format("{0:yyyy-MM-dd}", DateTime.Today);
             //this.input = input;
         }
         // [JsonProperty("temp")]
@@ -29,5 +30,6 @@ namespace UnknownBackend
         public string desc { get; set; }
         // [JsonProperty("img")]
         public string img { get; set; }
+        public string date { get; set; }
     }
 }

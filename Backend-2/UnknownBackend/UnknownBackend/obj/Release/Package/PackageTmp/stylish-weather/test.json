@@ -1,0 +1,58 @@
+{
+	"weather": {
+		"temp": "30",
+		"desc": "Wind",
+		"img": "img/rainy.png",
+		"date": "12/05/2014"
+	},
+	"items": [
+		{"name": "tops",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
+			}
+		},
+
+    {"name": "bottoms",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
+			}
+		},
+		
+		{"name": "shoes",
+		  "catUrl": "url",
+			"first": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
+			},
+			"second": {
+			"title": "blahblahblah",
+			"itemPrice": "10",
+			"imageUrl": "http://placehold.it/175x175",
+			"itemUrl": "http://google.com"
+			}
+		}
+
+	]
+}
