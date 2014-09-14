@@ -87,10 +87,23 @@ function fillHeader(weather){
 	img.setAttribute('src', weather.img);
 }
 
+// Pat's datepicker function
+$(function() {
+	$( "#datepicker" ).datepicker({
+		dateFormat: 'yy-mm-dd',
+		showOn: "button",
+		buttonImage: "images/calendar.gif",
+		buttonImageOnly: true,
+		buttonText: "Select date",
+		minDate: 0, maxDate: "+10D",
+		onSelect: function(){
+			console.log('date picked');
+		}
+	});
+});
+
 $(document).ready(function() {
-
 	var jsonData = "http://sch-laptop:80/api/Clothing";
-
 	$.getJSON(jsonData, function(json){
 		fillHeader(json.weather);
 		createTiles(json.items);
