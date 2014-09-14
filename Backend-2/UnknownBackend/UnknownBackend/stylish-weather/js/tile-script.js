@@ -95,13 +95,14 @@ Date.prototype.getDayName = function () {
     return d[this.getDay()];
 }
 
-Date.prototype.getDayName = function() {
-	var d = ['Sunday','Monday','Tuesday','Wednesday',
-	'Thursday','Friday','Saturday'];
-	return d[this.getDay()];
+Date.prototype.getDayName = function () {
+    var d = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
+	'Thursday', 'Friday', 'Saturday'];
+    return d[this.getDay()];
 }
 
 // fill in header/weather information
+//
 function fillHeader(weather) {
     var cityName = document.getElementById('city-name')
     cityName.innerHTML = "WELLINGTON";
