@@ -7,7 +7,7 @@ namespace UnknownBackend
 {
     public enum ClothingCatigory
     {
-        Light,
-        Heavy
+        warm,
+        cold
     }
 }

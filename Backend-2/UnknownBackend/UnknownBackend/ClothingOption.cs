@@ -18,6 +18,9 @@ namespace UnknownBackend
             Shoes = cat1;
             Pants = cat1;
             Tops = cat1;
+            TempRange = cat1;
         }
+
+        public ClothingCatigory TempRange { get; set; }
     }
 }

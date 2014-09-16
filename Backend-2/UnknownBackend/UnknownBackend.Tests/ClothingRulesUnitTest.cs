@@ -20,12 +20,12 @@ namespace UnknownBackend.Tests
             int tempC = 10;
             ClothingOption option = rules.GetClothingCatigory(tempC);
             Assert.IsNotNull(option);
-            Assert.AreEqual(ClothingCatigory.Heavy, option.Tops);
+            Assert.AreEqual(ClothingCatigory.cold, option.Tops);
 
             tempC = 25;
             ClothingOption option2 = rules.GetClothingCatigory(tempC);
             Assert.IsNotNull(option2);
-            Assert.AreEqual(ClothingCatigory.Light, option2.Tops);
+            Assert.AreEqual(ClothingCatigory.warm, option2.Tops);
         }
     }
 }

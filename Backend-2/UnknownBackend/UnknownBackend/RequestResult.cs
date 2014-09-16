@@ -16,16 +16,9 @@ namespace UnknownBackend
             
             WeatherAccessor accessor = new WeatherAccessor();
             weather = accessor.GetDayInfo();
-            items = TrademeAccessor.getLists();
-
-            //foreach (var item in qItems)
-            //{
-            //    items.Add(new CatigoryItemGroup("Skirts", item));
-            //}
-            
-            //foreach (var item in qItems)
-            //    items.Add(new CatigoryItemGroup(item));
-     
+            ClothingRules rules = new ClothingRules();
+            var clothingTempRange = rules.GetClothingCatigory(weather.getTempCAsInt());
+            items = TrademeAccessor.getLists(clothingTempRange);
         }
     }
 }

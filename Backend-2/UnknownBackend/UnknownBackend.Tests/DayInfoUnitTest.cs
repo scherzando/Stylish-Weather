@@ -42,5 +42,11 @@ namespace UnknownBackend.Tests
             dayInfo.img = "Icon.png";
             Assert.AreEqual("Icon.png", dayInfo.img);
         }
+        [TestMethod]
+        public void TestDayInfo()
+        {
+            dayInfo.temp = "20";
+            Assert.AreEqual(20, dayInfo.getTempCAsInt());
+        }
     }
 }

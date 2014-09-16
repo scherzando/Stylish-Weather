@@ -93,3 +93,4 @@ C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\Unkn
 C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\UnknownBackend\UnknownBackend\bin\Antlr3.Runtime.pdb
 C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\UnknownBackend\UnknownBackend\obj\Debug\UnknownBackend.dll
 C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\UnknownBackend\UnknownBackend\obj\Debug\UnknownBackend.pdb
+C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\UnknownBackend\UnknownBackend\obj\Debug\UnknownBackend.csprojResolveAssemblyReference.cache

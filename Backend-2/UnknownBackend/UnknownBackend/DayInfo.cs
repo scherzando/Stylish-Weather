@@ -31,5 +31,18 @@ namespace UnknownBackend
         // [JsonProperty("img")]
         public string img { get; set; }
         public string date { get; set; }
+
+        public int getTempCAsInt()
+        {
+            int tempCNum;
+            if (Int32.TryParse(temp, out tempCNum))
+            {
+                return tempCNum;
+            }
+            else
+            {
+                return 20;
+            }
+        }
     }
 }

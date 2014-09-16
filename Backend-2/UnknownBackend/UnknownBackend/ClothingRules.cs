@@ -10,16 +10,14 @@ namespace UnknownBackend
         public ClothingOption GetClothingCatigory(int tempC)
         {
             var options = new ClothingOption();
-            if (tempC < 20)
+            if (tempC < 15)
             {
-                options.SetAll(ClothingCatigory.Heavy);
+                options.SetAll(ClothingCatigory.cold);
             }
             else
             {
-                options.SetAll(ClothingCatigory.Light);
+                options.SetAll(ClothingCatigory.warm);
             }
-
-
             return options;
         }
     }
