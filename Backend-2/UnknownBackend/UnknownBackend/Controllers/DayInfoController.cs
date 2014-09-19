@@ -17,7 +17,7 @@ namespace UnknownBackend.Controllers
             int daysAway = 0;
             WeatherAccessor accessor = new WeatherAccessor();
 
-            return accessor.GetDayInfo();
+            return accessor.GetDayInfo(location);
         }
 
         // GET api/<controller>/5

@@ -10,17 +10,23 @@ namespace UnknownBackend
     {
         //private string[] input;
 
+
         public DayInfo()
         {
-            
+            temp = "20";
+            desc = "Fine";
+            img = "na";
+            date = String.Format("{0:yyyy-MM-dd}", DateTime.Today);
+            //city = "Wellington";
         }
-        public DayInfo(string[] input)
+        public DayInfo(string[] input, string city)
         {
             // TODO: Complete member initialization
             temp = input[0];
             desc = input[1];
             img = input[2];
             date = String.Format("{0:yyyy-MM-dd}", DateTime.Today);
+            this.city = city.ToUpper();
             //this.input = input;
         }
         // [JsonProperty("temp")]
@@ -31,6 +37,7 @@ namespace UnknownBackend
         // [JsonProperty("img")]
         public string img { get; set; }
         public string date { get; set; }
+        public string city { get; set; }
 
         public int getTempCAsInt()
         {

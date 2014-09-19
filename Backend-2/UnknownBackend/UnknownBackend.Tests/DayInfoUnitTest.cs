@@ -19,7 +19,7 @@ namespace UnknownBackend.Tests
         public void TestParamConstruct()
         {
             string[] input = { "15", "fine", "png" };
-            dayInfo = new DayInfo(input);
+            dayInfo = new DayInfo(input, "Wellington");
         }
 
         [TestMethod]

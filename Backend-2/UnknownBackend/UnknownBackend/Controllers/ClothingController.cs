@@ -16,9 +16,9 @@ namespace UnknownBackend.Controllers
         }
 
         // GET: api/ClothingController/5
-        public string Get(int id)
+        public RequestResult Get(string city)
         {
-            return "value";
+            return new RequestResult(city);
         }
 
         // POST: api/ClothingController

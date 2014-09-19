@@ -19,7 +19,7 @@ namespace UnknownBackend.Tests
         [TestMethod]
         public void TestGetDayInfo()
         {
-            DayInfo dayInfo = accessor.GetDayInfo();
+            DayInfo dayInfo = accessor.GetDayInfo("Wellington");
             Assert.IsNotNull(dayInfo);
         }
     }

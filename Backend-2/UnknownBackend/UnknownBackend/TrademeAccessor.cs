@@ -60,26 +60,38 @@ namespace UnknownBackend
 
         public static List<CatigoryItemGroup> getLists(ClothingOption clothingTempRange)
         {
+            try
+            {
+                var AlltheLists = new List<List<QueryResult>> { };
 
-            var AlltheLists = new List<List<QueryResult>> { };
+                //    if (varWeather.Equals("OverCast ) 
+                var resultsTops = callTrademeApi(CategorySort(clothingTempRange, "Tops"));
+                var resultsPant = callTrademeApi(CategorySort(clothingTempRange, "Pants"));
+                var resultsShoes = callTrademeApi(CategorySort(clothingTempRange, "Shoes"));
 
-            //    if (varWeather.Equals("OverCast ) 
-            var resultsTops = callTrademeApi(CategorySort(clothingTempRange, "Tops"));
-            var resultsPant = callTrademeApi(CategorySort(clothingTempRange, "Pants"));
-            var resultsShoes = callTrademeApi(CategorySort(clothingTempRange, "Shoes"));
+                // AlltheLists = new List<List<QueryResult>>();
 
-            // AlltheLists = new List<List<QueryResult>>();
+                AlltheLists.Add(resultsTops);
 
-            AlltheLists.Add(resultsTops);
+                AlltheLists.Add(resultsPant);
+                AlltheLists.Add(resultsShoes);
 
-            AlltheLists.Add(resultsPant);
-            AlltheLists.Add(resultsShoes);
-
-            List<CatigoryItemGroup> items = new List<CatigoryItemGroup>();
-            items.Add(new CatigoryItemGroup("Tops for " + clothingTempRange.TempRange + " weather", resultsTops));
-            items.Add(new CatigoryItemGroup("Pants for " + clothingTempRange.TempRange + " weather", resultsPant));
-            items.Add(new CatigoryItemGroup("Shoes for " + clothingTempRange.TempRange + " weather", resultsShoes));
-            return items;
+                List<CatigoryItemGroup> items = new List<CatigoryItemGroup>();
+                items.Add(new CatigoryItemGroup("Tops for " + clothingTempRange.TempRange + " weather", resultsTops));
+                items.Add(new CatigoryItemGroup("Pants for " + clothingTempRange.TempRange + " weather", resultsPant));
+                items.Add(new CatigoryItemGroup("Shoes for " + clothingTempRange.TempRange + " weather", resultsShoes));
+                return items;
+            }
+            catch(WebException)
+            {
+                List<CatigoryItemGroup> items = new List<CatigoryItemGroup>();
+                items.Add(new CatigoryItemGroup());
+                items.Add(new CatigoryItemGroup());
+                items.Add(new CatigoryItemGroup());
+                return items;
+            }
+                
+                
         }
         public static List<QueryResult> callTrademeApi(String Searhword)
         {
