@@ -1,5 +1,7 @@
 function createTiles(items) {
+    $("#tile-box").empty();
     var tileBox = document.getElementById('tile-box');
+    
     for (var i = 0; i < items.length; i++) {
         var cont = document.createElement('div');
         cont.className = "row";
@@ -74,20 +76,7 @@ function createInnerCategory(catObj) {
     return col;
 }
 
-// Pat's datepicker function
-$(function () {
-    $("#datepicker").datepicker({
-        dateFormat: 'yy-mm-dd',
-        showOn: "button",
-        buttonImage: "img/calendar.png",
-        buttonImageOnly: true,
-        buttonText: "Select date",
-        minDate: 0, maxDate: "+10D",
-        onSelect: function () {
-            console.log('date picked');
-        }
-    });
-});
+
 
 Date.prototype.getDayName = function () {
     var d = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
@@ -95,17 +84,11 @@ Date.prototype.getDayName = function () {
     return d[this.getDay()];
 }
 
-Date.prototype.getDayName = function() {
-	var d = ['Sunday','Monday','Tuesday','Wednesday',
-	'Thursday','Friday','Saturday'];
-	return d[this.getDay()];
-}
-
 // fill in header/weather information
-<<<<<<< HEAD
+//
 function fillHeader(weather) {
     var cityName = document.getElementById('city-name')
-    cityName.innerHTML = "WELLINGTON";
+    cityName.innerHTML = weather.city;
 
     var dateText = document.getElementById('date-text');
     // format date
@@ -128,44 +111,42 @@ function fillHeader(weather) {
     var img = document.getElementById('weather-img');
     img.setAttribute('src', weather.img);
 }
-
-=======
-function fillHeader(weather){
-	var cityName = document.getElementById('city-name')
-	cityName.innerHTML = "WELLINGTON";
-
-	var dateText = document.getElementById('date-text');
-	// format date
-	var monthNames = [ "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"];
-
-	var date = new Date(weather.date);
-	var day = date.getDate();
-	var month = monthNames[date.getMonth()];
-	var year = date.getFullYear();
-	var dayName = date.getDayName();
-
-	var dateString = dayName + " " + day + " " + month;
-
-	dateText.innerHTML = dateString;
-
-	var tempText = document.getElementById('temp-text');
-	tempText.innerHTML = weather.temp + "°C";
-	
-	var img = document.getElementById('weather-img');
-	img.setAttribute('src', weather.img);
-}
-
-
-$(document).ready(function() {
->>>>>>> origin/master
-
-$(document).ready(function () {
-
-    var jsonData = "/api/Clothing";
-
-    $.getJSON(jsonData, function (json) {
-        fillHeader(json.weather);
-        createTiles(json.items);
+function loadElements() {
+    // Pat's datepicker function
+    $(function () {
+        $("#datepicker").datepicker({
+            dateFormat: 'yy-mm-dd',
+            showOn: "button",
+            buttonImage: "img/calendar.png",
+            buttonImageOnly: true,
+            buttonText: "Select date",
+            minDate: 0, maxDate: "+10D",
+            onSelect: function () {
+                console.log('date picked');
+            }
+        });
     });
-});
+
+    $(document).ready(function () {
+
+        var jsonData = "/api/Clothing";
+
+        $.getJSON(jsonData, function (json) {
+            fillHeader(json.weather);
+            createTiles(json.items);
+        });
+    });
+}
+function loadData(city)
+{
+    $(document).ready(function () {
+
+        var jsonData = "/api/Clothing?city=" + city;
+
+        $.getJSON(jsonData, function (json) {
+            fillHeader(json.weather);
+            createTiles(json.items);
+        });
+    });
+
+}

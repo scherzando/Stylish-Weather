@@ -145,6 +145,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="AuctionItem.cs" />
+    <Compile Include="CategorySearchGenerator.cs" />
     <Compile Include="CatigoryItemGroup.cs" />
     <Compile Include="ClothingCatigory.cs" />
     <Compile Include="ClothingOption.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="RequestResult.cs" />
     <Compile Include="TrademeAccessor.cs" />
     <Compile Include="WeatherAccessor.cs" />
+    <Compile Include="WeatherCondition.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApiTest.aspx" />

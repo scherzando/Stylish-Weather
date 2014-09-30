@@ -16,7 +16,7 @@ namespace UnknownBackend
             }
             catch (WebException)
             {
-                return new DayInfo() { city = city};
+                return new DayInfo() { city = city.ToUpper() };
             }
         }
 
@@ -34,10 +34,6 @@ namespace UnknownBackend
 
         }
 
-
-
-
-
         public static String[] callweatherApi(string city)
         {
             String query = @"api.worldweatheronline.com/premium/v1/weather.ashx?q=Wellington&format=json&num_of_days=1&mca=NO&fx24=NO&includelocation=NO&show_comments=NO&tp=NO&showlocaltime=NO&key=a8d4a095add9aaee2d937dcf1d85c6493adffc83";
@@ -46,8 +42,6 @@ namespace UnknownBackend
 
             return parseWeatherapi(result);
         }
-
-
 
         public static string[] parseWeatherapi(String message)
         {

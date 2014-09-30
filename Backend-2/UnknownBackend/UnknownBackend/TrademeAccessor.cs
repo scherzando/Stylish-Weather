@@ -114,29 +114,30 @@ namespace UnknownBackend
             return queryResults;
         }
 
-        public static string CategorySort(ClothingOption clothingTempRange, String searchword)
+        public static string CategorySort(ClothingOption clothingConditions, String searchword)
         {
-            switch (clothingTempRange.TempRange)
-            {
-                case ClothingCatigory.warm:
-                    if (searchword.Equals("Pants")) return "category=6849&style=shorts&pants";
-                    if (searchword.Equals("Tops")) return "category=3033&style=short sleeve&t-shirt";
-                    if (searchword.Equals("Shoes")) return "category=762&style=sandals&jandals";
-                    break;
-                case ClothingCatigory.cold:
-                    if (searchword.Equals("Pants")) return "category=6849&style=jeans&pants";
-                    if (searchword.Equals("Tops")) return "category=3033&style=jumpers&jerseys&cardigan";
-                    if (searchword.Equals("Shoes")) return "category=762&style=Boots";
-                    break;
-                default:
-                    break;
-            }
+            CategorySearchGenerator searchGenerator = CategorySearchGenerator.Create(searchword);
+            // moved category strings to Category Search Generator.
+            return searchGenerator.GetSearch(clothingConditions);
             
-
+            //// TODO: remove!
+            //switch (clothingConditions.TempRange)
+            //{
+            //    case ClothingCatigory.warm:
+            //        if (searchword.Equals("Pants")) return "category=6849&style=shorts&pants";
+            //        if (searchword.Equals("Tops")) return "category=3033&style=short sleeve&t-shirt";
+            //        if (searchword.Equals("Shoes")) return "category=762&style=sandals&jandals";
+            //        break;
+            //    case ClothingCatigory.cold:
+            //        if (searchword.Equals("Pants")) return "category=6849&style=jeans&pants";
+            //        if (searchword.Equals("Tops")) return "category=3033&style=jumpers&jerseys&cardigan";
+            //        if (searchword.Equals("Shoes")) return "category=762&style=Boots";
+            //        break;
+            //    default:
+            //        break;
+            //}
             
-
             throw new Exception("Oh noes, it broke :-(");
-
         }
 
 

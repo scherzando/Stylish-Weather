@@ -7,7 +7,7 @@ namespace UnknownBackend
 {
     public class CatigoryItemGroup
     {
-        private List<TrademeAccessor.QueryResult> qItems;
+        private List<AuctionItem> qItems;
 
        // private TrademeAccessor.QueryResult item;
 
@@ -35,7 +35,12 @@ namespace UnknownBackend
 
         public CatigoryItemGroup(string name, List<TrademeAccessor.QueryResult> qItems)
         {
-            // TODO: fix assume
+            // Vaildate
+            if (qItems == null || qItems.Count == 0)
+            {
+                throw new ArgumentException("You must supply items and there must be elements", "qItems");
+            }
+
             Random rand = new Random(DateTime.Today.Second);
             int num1 = rand.Next(qItems.Count - 1);
             first = new AuctionItem(qItems[num1]);

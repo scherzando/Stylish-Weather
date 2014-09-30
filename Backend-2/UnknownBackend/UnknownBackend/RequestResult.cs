@@ -27,7 +27,7 @@ namespace UnknownBackend
             WeatherAccessor accessor = new WeatherAccessor();
             weather = accessor.GetDayInfo(city);
             ClothingRules rules = new ClothingRules();
-            var clothingTempRange = rules.GetClothingCatigory(weather.getTempCAsInt());
+            var clothingTempRange = rules.GetClothingCatigory(weather);
             items = TrademeAccessor.getLists(clothingTempRange);
         }
     }

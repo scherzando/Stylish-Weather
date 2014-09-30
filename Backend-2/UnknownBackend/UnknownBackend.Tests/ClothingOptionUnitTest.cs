@@ -66,5 +66,25 @@ namespace UnknownBackend.Tests
             Assert.AreEqual("cold", heavy.ToString());
 
         }
+
+        [TestMethod]
+        public void TestGetClothingWeather()
+        {
+            WeatherCondition wType = WeatherCondition.fine;
+            cOptions.WeatherType = wType;
+
+            Assert.AreEqual(wType, cOptions.WeatherType);
+        }
+
+        [TestMethod]
+        public void TestWeatherCondition()
+        {
+            WeatherCondition weather1 = WeatherCondition.fine;
+            WeatherCondition weather2 = WeatherCondition.rain;
+            WeatherCondition weather3 = WeatherCondition.wind;
+            WeatherCondition weather4 = WeatherCondition.overcast;
+            Assert.AreNotEqual(weather1, weather2);
+            Assert.AreNotEqual(weather3, weather4);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -7,18 +8,41 @@ namespace UnknownBackend
 {
     public class ClothingRules
     {
-        public ClothingOption GetClothingCatigory(int tempC)
+        ClothingOption weatherClothing = new ClothingOption();
+        public ClothingOption GetClothingTempCatigory(int tempC)
         {
-            var options = new ClothingOption();
+            // var weatherClothing = new ClothingOption();
             if (tempC < 15)
             {
-                options.SetAll(ClothingCatigory.cold);
+                weatherClothing.SetAll(ClothingCatigory.cold);
             }
             else
             {
-                options.SetAll(ClothingCatigory.warm);
+                weatherClothing.SetAll(ClothingCatigory.warm);
             }
-            return options;
+            return weatherClothing;
+        }
+
+        public ClothingOption GetClothingCatigory(DayInfo weather)
+        {
+            GetClothingTempCatigory(weather.getTempCAsInt());
+            SetWeatherCondition(weather.desc);
+
+            Debug.Print("TempC: " + weather.getTempCAsInt());
+            return weatherClothing;
+        }
+
+        private void SetWeatherCondition(string weatherCondition)
+        {
+            WeatherCondition condition = WeatherCondition.fine;
+            foreach (var possibleCondition in condition.GetArray())
+            {
+                if (weatherCondition.ToLower().Contains(possibleCondition.ToString()))
+                {
+                    weatherClothing.WeatherType = possibleCondition;
+                    break; // do not like (I wrote it)!!!!
+                }
+            }
         }
     }
 }

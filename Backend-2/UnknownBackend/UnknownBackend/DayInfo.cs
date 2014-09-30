@@ -48,6 +48,15 @@ namespace UnknownBackend
             }
             else
             {
+                try
+                {
+                    throw (new InvalidCastException("Number could not be parsed"));
+                }
+                catch (InvalidCastException e)
+                {
+                    // give e to raygun.
+                    throw;
+                }
                 return 20;
             }
         }

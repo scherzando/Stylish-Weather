@@ -47,6 +47,8 @@ namespace UnknownBackend.Tests
         {
             dayInfo.temp = "20";
             Assert.AreEqual(20, dayInfo.getTempCAsInt());
+            dayInfo.temp = "14";
+            Assert.AreEqual(14, dayInfo.getTempCAsInt());
         }
     }
 }

@@ -22,5 +22,7 @@ namespace UnknownBackend
         }
 
         public ClothingCatigory TempRange { get; set; }
+
+        public WeatherCondition WeatherType { get; set; }
     }
 }
