@@ -96,7 +96,6 @@
     <Compile Include="Controllers\DayInfoControllerUnitTest.cs" />
     <Compile Include="Controllers\ClothingControllerUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
     <Compile Include="DayInfoUnitTest.cs" />
     <Compile Include="ParseUnitTest.cs" />
     <Compile Include="ClothingOptionUnitTest.cs" />

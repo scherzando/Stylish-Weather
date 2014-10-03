@@ -8,37 +8,31 @@ using UnknownBackend;
 
 namespace UnknownBackend.Controllers
 {
+    /// <summary>
+    /// Provides a Web API to request the current conditions.
+    /// </summary>
     public class DayInfoController : ApiController
     {
-        // GET api/<controller>
+        // GET api/DayInfo/
+        /// <summary>
+        /// GET the current weather conditions for the Wellington region. Also includes the current date.
+        /// </summary>
+        /// <returns>Day Information</returns>
         public DayInfo Get()
         {
             string location = "Wellington";
-            int daysAway = 0;
             WeatherAccessor accessor = new WeatherAccessor();
-
             return accessor.GetDayInfo(location);
         }
-
-        // GET api/<controller>/5
-        public string Get(int id)
+        /// <summary>
+        /// GET the current weather conditions for a given region. Also includes the current date.
+        /// </summary>
+        /// <param name="location">The region to get the weather conditions for.</param>
+        /// <returns>Day Information</returns>
+        public DayInfo Get(string location)
         {
-            return "value";
-        }
-
-        // POST api/<controller>
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
+            WeatherAccessor accessor = new WeatherAccessor();
+            return accessor.GetDayInfo(location);
         }
     }
 }

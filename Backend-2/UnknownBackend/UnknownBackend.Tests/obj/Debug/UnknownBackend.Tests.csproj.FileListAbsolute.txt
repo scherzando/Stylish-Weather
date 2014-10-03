@@ -91,3 +91,4 @@ C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\Unkn
 C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\UnknownBackend\UnknownBackend.Tests\obj\Debug\UnknownBackend.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\UnknownBackend\UnknownBackend.Tests\obj\Debug\UnknownBackend.Tests.dll
 C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\UnknownBackend\UnknownBackend.Tests\obj\Debug\UnknownBackend.Tests.pdb
+C:\Users\Scott\Documents\Programming Files\WeatherFasion\checkout\Backend-2\UnknownBackend\UnknownBackend.Tests\bin\Debug\UnknownBackend.xml
